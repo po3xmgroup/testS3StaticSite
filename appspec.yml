@@ -3,7 +3,17 @@ os: linux
 files:
   - source: /webpage
     destination: /var/www
-hooks:
+
+permissions:
+   - object: /var/www/html
+     pattern: "**"
+     owner: nginx 
+     group: nginx
+     mode: 755
+     type:
+       - file
+
+  hooks:     
   AfterInstall:
     - location: scripts/install_dependencies
       timeout: 300
