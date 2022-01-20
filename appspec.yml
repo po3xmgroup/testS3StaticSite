@@ -1,11 +1,11 @@
 version: 0.0
 os: linux
 files:
-  - source: /webpage
-    destination: /var/www
+  - source: /
+    destination: /usr/share/nginx/html
 
 permissions:
-   - object: /var/www/html
+   - object: /usr/share/nginx/html
      pattern: "**"
      owner: nginx 
      group: nginx
