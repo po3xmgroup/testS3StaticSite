@@ -5,15 +5,15 @@ files:
     destination: /var/www/html
 hooks:
   AfterInstall:
-    - location: scripts/install_dependencies.yml
+    - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
   ApplicationStart:
-    - location: scripts/start_server.yml
+    - location: scripts/start_server.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/stop_server.yml
+    - location: scripts/stop_server.sh
       timeout: 300
       runas: root
 # version: 0.0
