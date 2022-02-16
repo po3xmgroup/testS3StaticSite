@@ -6,7 +6,9 @@ files:
     overwrite: true
 hooks:
   BeforeInstall:
-    overwrite: true
+    - location: scripts/remove.sh
+      timeout: 300
+      runas: root
   AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
