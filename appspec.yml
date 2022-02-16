@@ -5,6 +5,8 @@ files:
     destination: /var/www/html
     overwrite: true
 hooks:
+  BeforeInstall:
+    overwrite: true
   AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
